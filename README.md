@@ -87,10 +87,10 @@ $L_{loss} = |y_3 - y_{true}|$
 
 
 ## 反向传播
-$L_{loss}$对损失函数的输入(即第3层的输出)$y_3$的梯度为：\
-当$y_3 > y_{true}$ 即 $y_3 - y_{true} > 0$时:
+$L_{loss}$对损失函数的输入(即第3层的输出) $y_3$ 的梯度为：\
+当 $y_3 > y_{true}$ 即 $y_3 - y_{true} > 0$ 时:
 $\frac{\partial L_{loss}}{\partial y_3} = 1$ \
-当$y_3 < y_{true}$ 即 $y_3 - y_{true} < 0$时:
+当 $y_3 < y_{true}$ 即 $y_3 - y_{true} < 0$ 时:
 $\frac{\partial L_{loss}}{\partial y_3} = -1$
 
 

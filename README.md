@@ -32,13 +32,13 @@ $\frac{\partial L_{loss}}{\partial y_3} = 1$ \
 当 $y_3 < y_{true}$ 即 $y_3 - y_{true} < 0$ 时:
 $\frac{\partial L_{loss}}{\partial y_3} = -1$
 
-$L_{loss}$对第3层的权重参数$W_3$的梯度为：
+$L_{loss}$对第3层的权重参数 $W_3$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_3} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial W_3} = \pm1 \times y_2^T$
 
-$L_{loss}$对第2层的权重参数$W_2$的梯度为：
+$L_{loss}$对第2层的权重参数 $W_2$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_2} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial W_2} = (\pm1 \times W_3)^T y_1^T$
 
-$L_{loss}$对第2层的权重参数$W_2$的梯度为：
+$L_{loss}$对第1层的权重参数 $W_1$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_1} = \frac{\partial L_{loss}}{\partial y_3} 
 \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial y_1} \frac{\partial y_1}{\partial W_1}
  = (\pm1 \times W_3 \times W_2)^T x^T$
@@ -94,21 +94,21 @@ $\frac{\partial L_{loss}}{\partial y_3} = 1$ \
 $\frac{\partial L_{loss}}{\partial y_3} = -1$
 
 
-$L_{loss}$对第3层的权重参数$W_3$的梯度为：
+$L_{loss}$对第3层的权重参数 $W_3$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_3} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial W_3} = \pm1 \times y_2^T$ \
 $L_{loss}$对第3层的偏置参数$b_3$的梯度为：
 $\frac{\partial L_{loss}}{\partial b_3} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial b_3} = \pm1 \times 1$
 
 
-$L_{loss}$对第2层的权重参数$W_2$的梯度为：
+$L_{loss}$对第2层的权重参数 $W_2$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_2} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial W_2} = (\pm1 \times W_3)^T y_1^T$ \
-$L_{loss}$对第2层的偏置参数$b_2$的梯度为：
+$L_{loss}$对第2层的偏置参数 $b_2$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial b_2} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial b_2} = (\pm1 \times W_3)^T \times 1$
 
 
-$L_{loss}$对第1层的权重参数$W_1$的梯度为：
+$L_{loss}$对第1层的权重参数 $W_1$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_1} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial y_1} \frac{\partial y_1}{\partial W_1} = (\pm1 \times W_3 \times W_2)^T x^T$ \
-$L_{loss}$对第1层的偏置参数$b_1$的梯度为：
+$L_{loss}$对第1层的偏置参数 $b_1$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial b_1} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_2} \frac{\partial y_2}{\partial y_1} \frac{\partial y_1}{\partial b_1} = (\pm1 \times W_3 \times W_2)^T \times 1$
 
 

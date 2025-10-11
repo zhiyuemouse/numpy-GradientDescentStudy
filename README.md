@@ -96,7 +96,7 @@ $\frac{\partial L_{loss}}{\partial y_3} = -1$
 
 $L_{loss}$对第3层的权重参数 $W_3$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_3} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial W_3} = \pm1 \times y_2^T$ \
-$L_{loss}$对第3层的偏置参数$b_3$的梯度为：
+$L_{loss}$对第3层的偏置参数 $b_3$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial b_3} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial b_3} = \pm1 \times 1$
 
 

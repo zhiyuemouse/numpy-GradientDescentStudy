@@ -148,7 +148,7 @@ $y_{2A} = \text{Act}(y_2)$ \
 $y_3 = W_3 \times y_{2A} + b_3$
 
 其中 $\text{Act}$ 为激活函数，这里使用了 $\text LeakyReLU$ 函数, 负斜率 $\alpha$ 设为 $0.1$ \
-$ LeakyRuLU(x) = \begin{cases} x, & \text{if } x \geq 0 \\ \alpha \cdot x, & \text{if } x < 0 \end{cases} $
+$ LeakyRuLU(x) = \begin{cases} x, & \text{if } x \geq 0 \alpha \cdot x, & \text{if } x < 0 \end{cases} $
 
 整个过程相当于3层带偏置项与激活函数的全连接层
 ```python

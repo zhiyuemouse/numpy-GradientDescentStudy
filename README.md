@@ -144,7 +144,7 @@ $L_{new} = |y_{new} - y_{true}|$
 ## 前向传播
 $y_1 = W_1 \times x + b_1$ \
 $y_2 = W_2 \times y_1 + b_2$ \
-$y_{2A} = \text{Act}(y_2) $ \
+$y_{2A} = \text{Act}(y_2)$ \
 $y_3 = W_3 \times y_{2A} + b_3$
 
 其中 $\text{Act}$ 为激活函数，这里使用了 $\text LeakyReLU$ 函数, 负斜率 $\alpha$ 设为 $0.1$ \

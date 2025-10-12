@@ -147,8 +147,7 @@ $y_2 = W_2 \times y_1 + b_2$ \
 $y_{2A} = \text{Act}(y_2)$ \
 $y_3 = W_3 \times y_{2A} + b_3$
 
-其中 $\text{Act}$ 为激活函数，这里使用了 $\text LeakyReLU$ 函数, 负斜率 $\alpha$ 设为 $0.1$ \
-$$ \text{LeakyReLU}(x) = \begin{cases} x, & \text{if } x \geq 0 \\ \alpha \cdot x, & \text{if } x < 0 \end{cases} $$
+其中 $\text{Act}$ 为激活函数，这里使用了 $\text LeakyReLU$ 函数, 负斜率 $\alpha$ 设为 $0.1$ 
 
 整个过程相当于3层带偏置项与激活函数的全连接层
 ```python
@@ -185,17 +184,6 @@ $L_{loss}$对第2层的权重参数 $W_2$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial W_2} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_{2A}} \frac{\partial y_{2A}}{\partial y_2} \frac{\partial y_2}{\partial W_2}  = (\pm1 \times W_3 \times Act')^T y_1^T$ \
 $L_{loss}$对第2层的偏置参数 $b_2$ 的梯度为：
 $\frac{\partial L_{loss}}{\partial b_2} = \frac{\partial L_{loss}}{\partial y_3} \frac{\partial y_3}{\partial y_{2A}} \frac{\partial y_{2A}}{\partial y_2} \frac{\partial y_2}{\partial b_2} = (\pm1 \times W_3 \times Act')^T \times 1$
-
-因为
-$LeakyRuLU(x) = \begin{cases}
-    x, & \text{if } x \geq 0 \\
-    \alpha \cdot x, & \text{if } x < 0
-\end{cases}$
-, 所以
-$\frac{d LeakyRuLU(x)}{d x} = \begin{cases}
-    1, & \text{if } x \geq 0 \\
-    \alpha, & \text{if } x < 0
-\end{cases}$
 
 
 $L_{loss}$对第1层的权重参数 $W_1$ 的梯度为：
